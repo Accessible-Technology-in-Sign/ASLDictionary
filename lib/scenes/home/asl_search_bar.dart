@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ASLSearchBar extends StatefulWidget {
-  ASLSearchBar({key, required this.onSearch}) : super(key: key);
+  const ASLSearchBar({super.key, required this.onSearch});
 
-  ValueChanged<String> onSearch;
+  final ValueChanged<String> onSearch;
 
   @override
   State<ASLSearchBar> createState() => _ASLSearchBarState();
@@ -34,20 +34,14 @@ class _ASLSearchBarState extends State<ASLSearchBar> {
         suffixIcon: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Ink(
-              height: 50,
-              width: 20,
-              child: Center(
-                child: IconButton(
-                  icon: const Icon(Icons.clear),
-                  color: Colors.white,
-                  onPressed: () {
-                    if (controller.text.isNotEmpty) {
-                      controller.clear();
-                    }
-                  },
-                ),
-              ),
+            IconButton(
+              icon: const Icon(Icons.clear),
+              color: Colors.white,
+              onPressed: () {
+                if (controller.text.isNotEmpty) {
+                  controller.clear();
+                }
+              },
             ),
             IconButton(
               icon: const Icon(Icons.search),
