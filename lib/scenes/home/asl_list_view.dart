@@ -20,4 +20,3 @@ class ASLListView extends StatelessWidget {
     );    
   }
 }
-
