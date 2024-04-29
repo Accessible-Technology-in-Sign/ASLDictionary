@@ -41,8 +41,7 @@ class _VideoScreenState extends State<VideoScreen> {
             player: YoutubePlayer(
               key: ObjectKey(widget._controller),
               controller: widget._controller,
-              // aspectRatio: height / width,
-              aspectRatio: 16 / 9,
+              aspectRatio: height / width,
             ),
             builder: (_, player) {
               return Column(
